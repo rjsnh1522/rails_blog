@@ -1,12 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
+<%= @post.title %>  <br>
+<%= @post.content %>
 
-<h1>worked</h1>
+<br>
+<br>
 
-</body>
-</html>
+<%= link_to "Edit" ,edit_post_path(@post) %>
+<%= link_to "Delete" ,post_path(@post),method: :delete, data:{confirm:"Are you sure you want to delete this post"} %>
