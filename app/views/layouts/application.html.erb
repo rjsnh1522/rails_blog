@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bg</title>
+  <meta charset="UTF-8">
+  <title>Making blogging website to learn RAILS</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <!--<link rel="stylesheet" href="scss/aplication.css">-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header id="main_navigation" class="clearfix">
+  <a href="#" class="name">Logan</a>
+  <nav>
+    <%= link_to "Articles",posts_path%>
+    <!--<a href="articles.html">Articles</a>-->
+    <a href="">Project</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
 <%= yield %>
 
