@@ -1,10 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<h1 id="page_title">Stuff I've Written</h1>
+<div class="skinny_wrapper" id="posts_wrapper">
 
-</body>
-</html>
+  <% @posts.each do |post|%>
+      <div class="post">
+        <p class="date">
+          <%= post.created_at.strftime('%A, %B %d')%>
+        <h2><a href="#"><%= link_to post.title, post%></a></h2>
+        </p>
+        <hr>
+      </div>
+      <% end %>
+
+
+  <div class="post">
+    <p class="date">
+      Friday April 10th
+    <h2><a href="#">TO Do List</a></h2>
+    </p>
+    <hr>
+  </div>
+  <div class="post">
+    <p class="date">
+      Friday April 10th
+    <h2><a href="#">TO Do List</a></h2>
+    </p>
+    <hr>
+  </div>
+
+
+  <div class="pagination">
+        <span class="previous_page disabled">
+            Prev
+        </span>
+    <em class="current">1</em>
+    <a href="#" rel="next">2</a>
+    <a href="#" class="next_page" href="#">Next</a>
+  </div>
+</div>
