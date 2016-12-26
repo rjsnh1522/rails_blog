@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161226115225) do
+ActiveRecord::Schema.define(version: 20161226124554) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -42,6 +42,10 @@ ActiveRecord::Schema.define(version: 20161226115225) do
     t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
+    t.string   "string"
   end
+
+  add_index "projects", ["string"], name: "index_projects_on_string", unique: true
 
 end
